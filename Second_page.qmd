@@ -1,0 +1,52 @@
+---
+title: "HTML Intro"
+subtitle: "The Power of HTML Documents"
+author: "Ifeanyi Okoye"
+theme: minty
+date: "2024-04-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+if(!require(pacman))install.packages("pacman")
+pacman::p_load(reactable,
+               tidyverse,
+               plotly)
+```
+
+# What Makes HTML Reports So Great?
+
+::: panel-tabset
+## Interactive Tables
+
+For example, reactable
+
+```{r}
+reactable(infert)
+```
+
+## Interactive Plots
+
+For example, plotly
+
+```{r}
+education_plot <- ggplot(infert, aes(x = education, fill = education)) +
+  geom_bar()
+
+ggplotly(education_plot)
+```
+:::
+
+# Why Are HTML Reports so Rich?
+
+They leverage the full power of web technologies
+
+Three things to know:
+
+-   HTML: Hypertext Markup Language
+
+-   CSS: Cascading Style Sheets
+
+-   Javascript
+
