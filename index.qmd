@@ -1,0 +1,27 @@
+---
+title: "My First Page"
+subtitle: "The Power of HTML Documents"
+author: "Ifeanyi Okoye"
+theme: minty
+date: "2024-04-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+if(!require(pacman))install.packages("pacman")
+pacman::p_load(reactable,
+               tidyverse,
+               plotly)
+```
+
+
+```{r}
+reactable(infert)
+```
+
+
+```{r}
+plot(women)
+```
+
